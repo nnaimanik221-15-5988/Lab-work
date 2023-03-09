@@ -1,18 +1,21 @@
-import java.util.Scanner;
-
 public class Main {
-    public static void main(String[]args){
-        Scanner in =new Scanner(System.in);
-        int a=in.nextInt();
-        Vehicle obj1=new Vehicle();
-        obj1.speed=a;
-        obj1.run();
+    public static void main(String[] args) {
+        AddressInfo addressInfo= new AddressInfo("Sector 4", "Uttara", "Dhaka", "1711");
+        InsuranceInfo insuranceInfo =new InsuranceInfo("Life Insurance", 123);
+        Employeee employeee =new Employeee("Mr. Rahim",addressInfo, insuranceInfo );
+        employeee.display();
 
-        Bike obj2=new Bike();
-        obj2.speed=a;
-        obj2.run();
-        Car obj3=new Car();
-        obj3.speed=a;
-        obj3.run();
+
+        Engine eng = new Engine(34.7);
+        DashBoard db= new DashBoard(5.0);
+        Volvo v=new Volvo(700,"2022", "DHA34567",eng,db);
+        v.drive();
+        v.stop();
+        v.changeFuel();
+        v.checkBattery();
+        v.model="SUV. XC40";
+        v.company="Volvo";
+
     }
 }
+
